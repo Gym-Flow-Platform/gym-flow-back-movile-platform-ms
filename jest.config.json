@@ -1,0 +1,22 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "transformIgnorePatterns": ["node_modules/(?!(uuid)/)"],
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "reporters": [
+    "default",
+    [
+      "jest-junit",
+      {
+        "suiteName": "gym-flow-back-movile-platform-ms",
+        "outputDirectory": "coverage",
+        "outputName": "junit-report.xml"
+      }
+    ]
+  ],
+  "rootDir": "src",
+  "testRegex": ".*\\.spec\\.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  }
+}

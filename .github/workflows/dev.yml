@@ -1,0 +1,18 @@
+name: Develop
+
+on:
+  pull_request:
+  push:
+    branches:
+      - develop
+
+jobs:
+  validation:
+    uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/pr-validation.yml@main
+
+  docker:
+    if: github.ref == 'refs/heads/develop'
+    uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/docker-build.yml@main
+    with:
+      image_name: hervelasquez/gym-flow-back-movile-platform-ms
+      tag: develop
