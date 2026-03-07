@@ -11,19 +11,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy package files first for better caching
-COPY --chown=node:node package*.json ./
+COPY --chown=node:node package.json yarn.lock ./
 
 # Install all dependencies (including devDependencies needed for build)
-RUN npm ci
+RUN yarn ci
 
 # Copy source code
 COPY --chown=node:node . .
 
 # Generate the production build
-RUN npm run build
+RUN yarn build
 
 # Install only production dependencies and clean cache
-RUN npm ci --only=production && npm cache clean --force
+RUN yarn ci --only=production && yarn cache clean --force
 
 #
 # 🚀 Production Runtime
