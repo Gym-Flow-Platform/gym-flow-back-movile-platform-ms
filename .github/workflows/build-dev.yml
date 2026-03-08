@@ -1,20 +1,12 @@
-name: Develop
+name: Build Develop
 
 on:
-  pull_request:
   push:
     branches:
       - develop
 
 jobs:
-  compile-validations:
-    uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/pr-validation.yml@main
-    with:
-      environment: Develop
-    secrets: inherit
-
   build:
-    if: github.ref == 'refs/heads/develop'
     uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/docker-build.yml@main
     with:
       environment: Develop
