@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1772925955248" clover="3.2.0">
-  <project timestamp="1772925955248" name="All files">
+<coverage generated="1772946908632" clover="3.2.0">
+  <project timestamp="1772946908632" name="All files">
     <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="6" methods="4" coveredmethods="4" elements="22" coveredelements="20" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
     <file name="health.controller.ts" path="/Users/hernanvelasquez/Saas-proyects/GymFlowProyect/gym-flow-back-movile-platform-ms/src/health.controller.ts">
       <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="6" methods="4" coveredmethods="4"/>

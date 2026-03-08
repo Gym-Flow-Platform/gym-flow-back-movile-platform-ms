@@ -1,0 +1,14 @@
+name: Build Develop
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/docker-build.yml@main
+    with:
+      environment: Develop
+      image_name: hervelasquez/gym-flow-back-movile-platform-ms-dev
+    secrets: inherit

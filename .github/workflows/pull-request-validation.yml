@@ -1,0 +1,15 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+      - test
+
+jobs:
+  compile-validations:
+    uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/pr-validation.yml@main
+    with:
+      environment: Develop
+    secrets: inherit
