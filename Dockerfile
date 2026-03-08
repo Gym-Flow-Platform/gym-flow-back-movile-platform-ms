@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --chown=node:node package.json yarn.lock ./
 
 # Install all dependencies (including devDependencies needed for build)
-RUN yarn ci
+RUN yarn install --frozen-lockfile
 
 # Copy source code
 COPY --chown=node:node . .
@@ -23,7 +23,7 @@ COPY --chown=node:node . .
 RUN yarn build
 
 # Install only production dependencies and clean cache
-RUN yarn ci --only=production && yarn cache clean --force
+RUN yarn install --frozen-lockfile --production && yarn cache clean --force
 
 #
 # 🚀 Production Runtime
