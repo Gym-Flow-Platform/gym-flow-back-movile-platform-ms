@@ -8,8 +8,9 @@ on:
 
 jobs:
   validation:
-    environment: Develop
     uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/pr-validation.yml@main
+    with:
+      environment: Develop
 
   # docker:
   #   if: github.ref == 'refs/heads/develop'
