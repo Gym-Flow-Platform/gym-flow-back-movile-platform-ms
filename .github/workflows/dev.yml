@@ -8,6 +8,7 @@ on:
 
 jobs:
   validation:
+    environment: Develop
     uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/pr-validation.yml@main
 
   # docker:
@@ -15,5 +16,3 @@ jobs:
   #   uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/dockerBuild.yml@main
   #   with:
   #     image_name: hervelasquez/gym-flow-back-movile-platform-ms
-
-  
