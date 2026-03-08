@@ -11,7 +11,7 @@ jobs:
     uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/pr-validation.yml@main
     with:
       environment: Develop
-
+    secrets: inherit
   # docker:
   #   if: github.ref == 'refs/heads/develop'
   #   uses: Gym-Flow-Platform/gym-flow-ci-cd-pipelines/.github/workflows/dockerBuild.yml@main
